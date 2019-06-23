@@ -30,7 +30,6 @@ namespace Funcion
             if (opcion == 1)
             {
                 //Suma
-
                 Suma();
 
             }
@@ -39,6 +38,17 @@ namespace Funcion
             if (opcion == 2)
             {
                 //Resta
+
+                //declaración de variable para resultado
+
+                float resultado = 0f;
+
+                //Invocamos y obtenemos el resultado
+
+                resultado = Resta();
+
+                Console.WriteLine("El resultado de la resta es {0}", resultado);
+                Console.ReadKey();
 
             }
 
@@ -58,7 +68,7 @@ namespace Funcion
 
         }
 
-        static void Suma()
+        static void Suma()   // Esta función no regresa ningún valor, todo se hace dentro de la función
         {
             float a = 0f, b = 0f, r = 0;
 
@@ -76,5 +86,30 @@ namespace Funcion
 
             Console.ReadKey();
         }
+
+
+        static float Resta()
+        {
+            //Definición de variables
+
+            float a = 0f, b = 0f, r = 0;
+
+            Console.WriteLine("Dame el primer número: ");
+            a = Convert.ToSingle(Console.ReadLine());
+
+            Console.WriteLine("Dame el segundo número: ");
+            b = Convert.ToSingle(Console.ReadLine());
+
+            r = a - b;
+
+            //Regresamos el resultado
+
+            return r;
+
+
+        }
+
+
+
     }
 }
