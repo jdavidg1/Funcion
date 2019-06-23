@@ -18,8 +18,8 @@ namespace Funcion
 
             Console.WriteLine("1 Suma");
             Console.WriteLine("2 Resta");
-            Console.WriteLine("3 División");
-            Console.WriteLine("4 Multiplicación");
+            Console.WriteLine("3 Multiplicación");
+            Console.WriteLine("4 División");
 
             //Pedimos la opción
 
@@ -56,6 +56,20 @@ namespace Funcion
             if (opcion == 3)
             {
                 //Multiplicación
+                float n1 = 0f, n2 = 0;
+
+                // Solicitar los valores
+
+                Console.WriteLine("Dame el primer número: ");
+                n1 = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Dame el segundo número: ");
+                n2 = Convert.ToSingle(Console.ReadLine());
+
+                // Invocar la función
+
+                Multiplicacion(n1, n2);
+
 
             }
 
@@ -106,10 +120,21 @@ namespace Funcion
 
             return r;
 
-
         }
 
+        static void Multiplicacion(float a, float b) //Recibe valores pero no regresa
+        {
+            //Variables necesarias
+
+            float r = 0f;
+
+            r = a * b;
+
+            Console.WriteLine($"El resultado de {a} * {b} es = {r}");
+
+            Console.ReadKey();
 
 
+        }
     }
 }
