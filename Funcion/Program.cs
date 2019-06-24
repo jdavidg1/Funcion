@@ -76,6 +76,30 @@ namespace Funcion
             if (opcion == 4)
             {
                 //División
+                //Definición de variables
+
+                float n1 = 0.0f, n2 = 0.0f, resultado = 0.0f;
+
+
+                // Solicitar los valores
+
+                Console.WriteLine("Dame el primer número: ");
+                n1 = Convert.ToSingle(Console.ReadLine());
+
+                Console.WriteLine("Dame el segundo número: ");
+                n2 = Convert.ToSingle(Console.ReadLine());
+
+                // Invocar la función
+
+                resultado = Division(n1, n2);
+
+                // Console.WriteLine("El resultado de la división es {0}", resultado);
+                Console.WriteLine($"El resultado de la división de {n1}/{n2} es = {resultado}");
+
+                Console.ReadKey();
+
+
+
 
             }
 
@@ -134,7 +158,28 @@ namespace Funcion
 
             Console.ReadKey();
 
+        }
+
+        static float Division(float a, float b)
+        {
+            //Definición de variables
+
+            float r = 0f;
+
+            if (b == 0)
+            {
+                Console.WriteLine("La división no se puede hacer");
+                return 0.0f;
+            }
+
+            else
+            {
+
+                r = a / b;
+                return r;
+            }
 
         }
+
     }
 }
