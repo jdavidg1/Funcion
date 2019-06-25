@@ -60,11 +60,9 @@ namespace Funcion
 
                 // Solicitar los valores
 
-                Console.WriteLine("Dame el primer número: ");
-                n1 = Convert.ToSingle(Console.ReadLine());
+                n1 = PedirFlotante("Ingresa el primer número ");
 
-                Console.WriteLine("Dame el segundo número: ");
-                n2 = Convert.ToSingle(Console.ReadLine());
+                n2 = PedirFlotante("Ingresa el segundo número ");
 
                 // Invocar la función
 
@@ -83,11 +81,9 @@ namespace Funcion
 
                 // Solicitar los valores
 
-                Console.WriteLine("Dame el primer número: ");
-                n1 = Convert.ToSingle(Console.ReadLine());
+                n1 = PedirFlotante("Ingresa el primer número ");
 
-                Console.WriteLine("Dame el segundo número: ");
-                n2 = Convert.ToSingle(Console.ReadLine());
+                n2 = PedirFlotante("Ingresa el segundo número ");
 
                 // Invocar la función
 
@@ -98,8 +94,7 @@ namespace Funcion
 
                 Console.ReadKey();
 
-
-
+                
 
             }
 
@@ -179,6 +174,22 @@ namespace Funcion
                 return r;
             }
 
+
+        }
+
+        static float PedirFlotante(string mensaje)
+        {
+            //Definición de variables
+
+            float numero = 0.0f;
+
+            //Mostramos el mensaje
+            Console.Write(mensaje);
+
+            //Obtenermos el valor
+            numero = Convert.ToSingle(Console.ReadLine());
+            //Regresamos el dato
+            return numero;
         }
 
     }
